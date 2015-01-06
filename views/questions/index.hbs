@@ -1,0 +1,22 @@
+<h1>Survey Questions</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each questions}}
+      <tr data-id="{{id}}">
+        <td><a href="/questions/{{id}}" class="btn btn-link">{{value}}</a></td>
+        <td><a href="/questions/{{id}}" class="btn btn-default">View</a></td>
+        <td><div class="btn btn-default">Edit</div></td>
+        <td><div class="btn btn-default">Delete</div></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/questions/new" class="btn btn-primary">New Question</a>
